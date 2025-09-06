@@ -190,6 +190,7 @@
             <!--user rating -->
             <strong class="username">{{ user.email }}</strong>
             <p class="comment">{{ user.created }}</p>
+            <button class="btn" @click="showAlert(user.email)">Remove</button>
           </div>
         </div>
       </div>
@@ -268,7 +269,7 @@ export default {
 
       const urls = [
       "https://star-panda-literally.ngrok-free.app/app.php",
-       "https://rusiann7.helioho.st/app.phpccc",
+       "https://rusiann7.helioho.st/app.php",
         "http://localhost:8080/app.php"
     ];
 
@@ -330,7 +331,7 @@ export default {
       const urls = [
         "https://insect-fitting-antelope.ngrok-free.app/app.php",
       "https://star-panda-literally.ngrok-free.app/app.php",
-       "https://rusiann7.helioho.st/app.phpccc",
+       "https://rusiann7.helioho.st/app.php",
         "http://localhost:8080/app.php",
         
     ];
@@ -468,6 +469,10 @@ export default {
           this.hideSidebar(); 
         }
       }
+    },
+
+    showAlert(email) {
+      alert(email);
     },
 
     showSidebar() {
